@@ -6,7 +6,7 @@ const seedDB = async () => {
         await sequelize.sync({ force: true }); 
         
         const user1 = await User.create({
-            name: 'John Doe',
+            username: 'John Doe',
             email: 'john@example.com',
             password: 'password123',
         });
@@ -24,7 +24,7 @@ const seedDB = async () => {
         });
 
         const user2 = await User.create({
-            name: 'Jane Doe',
+            username: 'Jane Doe',
             email: 'jane@example.com',
             password: 'password456',
         });

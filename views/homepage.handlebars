@@ -1,6 +1,8 @@
 <main>
     <div id="post-container">
-        
+    {{#each postData as |postbox|}} 
+    {{> postBox}} 
+    {{/each}}
     </div>
     <aside>
 

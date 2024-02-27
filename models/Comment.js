@@ -26,7 +26,11 @@ Comment.init({
         model: 'User',
         key: 'id',
     },
-  }
+  },
+  content: {
+    type: DataTypes.STRING,
+    allowNull: false,
+},
 }, {
   sequelize,
   freezeTableName: true,
