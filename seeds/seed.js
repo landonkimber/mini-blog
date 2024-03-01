@@ -7,7 +7,6 @@ const seedDB = async () => {
         
         const user1 = await User.create({
             username: 'John Doe',
-            email: 'john@example.com',
             password: 'password123',
         });
 
@@ -25,7 +24,6 @@ const seedDB = async () => {
 
         const user2 = await User.create({
             username: 'Jane Doe',
-            email: 'jane@example.com',
             password: 'password456',
         });
 
