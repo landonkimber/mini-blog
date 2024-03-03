@@ -3,7 +3,12 @@
         <h1>THE MINI BLOG</h1>  
     </div>
     <div id="login-box">
+        {{#if userData.logged_in}}
+        <button id="logout-btn">LOGOUT</button>
+        <script src="/js/logout.js"></script>
+        {{else}}
         <p>Want to contribute??</p>
-        <div>LOGIN HERE!</div>
+        <a href="/login">LOGIN HERE</a>
+        {{/if}}
     </div>
 </header>
