@@ -1,12 +1,18 @@
 console.log("Login JS")
 
+document.addEventListener('DOMContentLoaded', () => {
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
     // Collect values from the login form
     const username = document.querySelector('#username-field').value.trim();
     const password = document.querySelector('#password-field').value.trim();
-  
+    console.log(`
+    Username: ${username}
+    Password: ${password}
+    `);
+
+
     if (username && password) {
       // Send a POST request to the API endpoint
       const response = await fetch('/api/users/login', {
@@ -21,11 +27,16 @@ const loginFormHandler = async (event) => {
         req.session.logged_in = true;
         console.log("Logged In");
     } else {
-        alert(response.statusText);
+        document.querySelector('#alert-text').textContent = 'The username or password is incorrect. Please try again!';
       }
-    } 
+    } else {
+      document.querySelector('#alert-text').textContent = 'Fields cannot be blank! Please try again!';
+    }
   };
-  
+
+  document.querySelector('#login-btn').addEventListener('click', loginFormHandler);
+});
+
 //   const signupFormHandler = async (event) => {
 //     event.preventDefault();
   
