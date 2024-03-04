@@ -1,7 +1,5 @@
-console.log('linked logout.js')
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('linked logout.js');
 const logout = async () => {
 
     console.log('testme');

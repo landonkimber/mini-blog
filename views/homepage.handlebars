@@ -8,6 +8,15 @@
     {{#if userData.logged_in}}
         <h2>Welcome {{userData.username}}</h2>
         <h2>Write a post here!</h2>
+        
+        <h4>Subject:</h4>
+        <input id="subject-field"></input>
+        <h4>Content:</h4>
+        <input id="content-field"></input>
+        <button id="post-btn">SUBMIT</button>
+        <h3 id="alert-text"></h3>
+        <p>{{userData}}</p>
+        <script src="./js/post.js"></script>
     {{else}}
         <p>You must be logged in to contribute.</p>
     {{/if}}

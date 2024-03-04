@@ -82,4 +82,10 @@ router.get('/get-users', async (req, res) => {
     }
 });
 
+router.get('/session', (req, res) => {
+  res.json({
+      userData: req.session
+  });
+});
+
 module.exports = router;

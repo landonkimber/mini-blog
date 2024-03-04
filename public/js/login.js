@@ -1,4 +1,4 @@
-console.log("Login JS")
+console.log("LoginJS")
 
 document.addEventListener('DOMContentLoaded', () => {
 const loginFormHandler = async (event) => {
@@ -7,11 +7,6 @@ const loginFormHandler = async (event) => {
     // Collect values from the login form
     const username = document.querySelector('#username-field').value.trim();
     const password = document.querySelector('#password-field').value.trim();
-    console.log(`
-    Username: ${username}
-    Password: ${password}
-    `);
-
 
     if (username && password) {
       // Send a POST request to the API endpoint
@@ -24,8 +19,9 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         // If successful, redirect the browser to the profile page
         document.location.replace('/');
-        req.session.logged_in = true;
+
         console.log("Logged In");
+        console
     } else {
         document.querySelector('#alert-text').textContent = 'The username or password is incorrect. Please try again!';
       }

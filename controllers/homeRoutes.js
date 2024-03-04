@@ -21,9 +21,9 @@ router.get('/', async (req, res) => {
         console.log(postData);
 
         const userData = {
-            logged_in: req.session.logged_in,
-            username: req.session.username,
-            user_id: req.session.user_id
+            logged_in: req.session.logged_in || false,
+            username: req.session.username || null,
+            user_id: req.session.user_id || null
         }
 
         console.log(`req.session.logged_in ${req.session.logged_in}`);
