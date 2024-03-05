@@ -18,7 +18,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/');
+        document.location.replace(`/profile/${username}`);
 
         console.log("Logged In");
         console
@@ -55,7 +55,7 @@ const loginFormHandler = async (event) => {
 //     }
 //   };
   
-  document.querySelector('#login-btn').addEventListener('click', loginFormHandler);
+  // document.querySelector('#login-btn').addEventListener('click', loginFormHandler);
 //   document
 //     .querySelector('.signup-form')
 //     .addEventListener('submit', signupFormHandler);

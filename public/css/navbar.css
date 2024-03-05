@@ -1,0 +1,29 @@
+#navbar-container {
+    height: 15vh;
+    background-color: var(--orange);
+    color:var(--softWhite);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#want-to-contribute {
+    position: relative;
+}
+
+a {
+    text-shadow: 2px 2px 1px var(--red);
+    color: var(--popOrange);
+}
+
+a:hover {
+    text-decoration: none;
+    text-shadow: 0 0 1px var(--red);
+    color: rgb(251, 246, 196);
+}
+
+#login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

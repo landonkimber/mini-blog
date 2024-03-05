@@ -1,14 +1,16 @@
+
 <header id="navbar-container">
     <div id="title-box">
-        <h1>THE MINI BLOG</h1>  
+        <h1><a href="/">THE MINI BLOG</a></h1>  
     </div>
     <div id="login-box">
         {{#if userData.logged_in}}
-        <button id="logout-btn">LOGOUT</button>
+        <h2><a href="/profile" id="profile-btn">PROFILE</a></h2>
+        <h2><a id="logout-btn">LOGOUT</a></h2>
         <script src="/js/logout.js"></script>
         {{else}}
-        <p>Want to contribute??</p>
-        <a href="/login">LOGIN HERE</a>
+        <p id="want-to-contribute">Want to contribute??</p>
+        <h2><a href="/login" >LOGIN HERE</a></h2>
         {{/if}}
     </div>
 </header>

@@ -1,12 +1,5 @@
-<link rel="stylesheet" href="./css/homepage.css">
 <main>
-    <div id="main-container">
-    {{#each postData as |postbox|}} 
-    {{> postBox}} 
-    {{/each}}
-    </div>
-    <aside>
-    {{!-- {{#if userData.logged_in}}
+    {{#if userData.logged_in}}
         <h2>Welcome {{userData.username}}</h2>
         <h2>Write a post here!</h2>
         
@@ -16,9 +9,13 @@
         <input id="content-field"></input>
         <button id="post-btn">SUBMIT</button>
         <h3 id="alert-text"></h3>
-        <script src="./js/post.js"></script>
+        {{#each userPostData as |userPosts|}} 
+        {{> userPosts}} 
+        {{/each}}
     {{else}}
         <p>You must be logged in to contribute.</p>
-    {{/if}} --}}
-    </aside>
+    {{/if}}
+    <link rel="stylesheet" href=".././css/navbar.css">
+    <script src=".././js/delete.js"></script>
+    <script src=".././js/post.js"></script>
 </main>

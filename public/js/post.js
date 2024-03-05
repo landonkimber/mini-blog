@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.location.replace('/');
 
             } else {
-                document.querySelector('#alert-text').textContent = 'Post failed!';
+                document.querySelector('#alert-text').textContent = 'Post failed! Try again';
             }
         } else {
             document.querySelector('#alert-text').textContent = 'Fields cannot be blank! Please try again!';
